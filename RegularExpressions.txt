@@ -1,0 +1,56 @@
+(1)  // Regular Expression
+/ ninja /gm
+
+// Test String
+// ninja is in text
+lgleegninjaiggl: match
+
+(2)   // Regular Expression
+// Only matches if nothing before & after it
+/ ^ninja$ /gm
+
+// Test String
+lgleegninjaiggl: not match
+ninja: match
+
+(3)  // Regular Expression
+// Matches a single lower case letter between a-z
+/ [a-z]$ /gm
+
+// Test String
+a: match
+hp: not a match
+
+(4)  // Regular Expression
+// Includes lowercase single letter between c-p
+/^[c-p]$ /gm
+
+// Test String
+e: match
+
+
+(5) // Regular Expression
+// Includes lower/upper case single letter
+/^[a-z A-Z]$ /gm
+
+// Test String
+G: match
+
+(6)  // Regular Expression
+Includes lower and upper case letters between 6-10 characters
+/^[a-z A-Z](6,10)$ /gm
+
+// Test String
+HeLLoO: match
+
+(7)  // Regular Expression
+Includes lower and upper case letters and numbers between 6-10 characters
+/^[a-z A-Z 0-9 ](6,14)$ /gm
+
+// Test String
+ninja123: match
+ninja@!jf: not a match
+
+// Regular Expression
+Dot(.) includes any characters between 6-10 characters
+/^.{6-10}$ /gm
